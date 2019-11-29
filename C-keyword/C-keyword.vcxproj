@@ -51,7 +51,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>E:\GitHub\C_KeyWords\C-keyword\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\C-keyword\inc</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -78,14 +78,20 @@
   <ItemGroup>
     <ClInclude Include="inc\const.h" />
     <ClInclude Include="inc\enum.h" />
+    <ClInclude Include="inc\err.h" />
+    <ClInclude Include="inc\file.h" />
     <ClInclude Include="inc\pointer.h" />
+    <ClInclude Include="inc\recursion.h" />
     <ClInclude Include="inc\struct.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\const.c" />
     <ClCompile Include="src\enum.c" />
+    <ClCompile Include="src\err.c" />
+    <ClCompile Include="src\file.c" />
     <ClCompile Include="src\main.c" />
     <ClCompile Include="src\pointer.c" />
+    <ClCompile Include="src\recursion.c" />
     <ClCompile Include="src\struct.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -27,6 +27,15 @@
     <ClInclude Include="inc\struct.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="inc\err.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\file.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="inc\recursion.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\const.c">
@@ -42,6 +51,15 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="src\struct.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\err.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\file.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\recursion.c">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

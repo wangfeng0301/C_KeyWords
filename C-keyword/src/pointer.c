@@ -23,26 +23,37 @@ int Test_Mod2(int a)
 }
 
 
-//#define func_ptr_t
-////#define INS_FUNC_PTR
-//#define USER_FUNC_TABLE_OFFSET	0x0000A000
-//typedef void(func_ptr_t* INS_FUNC_PTR)(void); //_INS_ATTR_;
-//
-//int Test_Sum(int a,int b)
+typedef int function_1(int param);
+typedef int *function_2(int param);
+typedef int (*function_3)(int param);
+typedef int* (*function_4)(int param);
+int sum1(int n)
+{
+	int a=100;
+	return a+n;
+}
+
+int* sum4(int n)//指针函数，即函数返回的是指针类型
+{
+	int a=200;
+	return &a;
+}
+
+//int* sum3(int n)//函数指针，即本质是指针
 //{
-//	return a+b;
+//	int a=300;
+//	return a+n;
 //}
-//const INS_FUNC_PTR APITABLE[128]= //_attribute_((at(USER_FUNC_TABLE_OFFSET))) = 
-//{
-//	(INS_FUNC_PTR)Test_Sum
-//}
-//
-//#define  Test_Sum1(a,b)	((*(int(*)(int,int))(APITABLE[0]))(a,b))
-//
-//int Test_Sum2(int a,int b)
-//{
-//	return ((*(int(*)(int,int))(APITABLE[0]))(a,b));
-//}
+
+int sum(function_3 fun)
+{
+	return fun(10);
+}
+
+int* my_sum4(function_4 fun)
+{
+	return fun(10);
+}
 
 void(*APITABLE[128])(void)={Test_Add,Test_Sub,Test_Mul,Test_Div,Test_Mod2};
 #define  Test_Add_Table(a,b)	((*(int(*)(int,int))(*APITABLE[0]))(a,b))

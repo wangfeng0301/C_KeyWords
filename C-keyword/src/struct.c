@@ -1,6 +1,13 @@
 #include <stdio.h>
 #include "struct.h"
 
+typedef struct 
+{
+	int age;
+	char name[6];
+	short score;
+}student;
+
 typedef struct  
 {
 	char a;

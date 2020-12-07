@@ -12,11 +12,12 @@ int main()
 {
 	//const_test();
 	//pointer_test();
-	struct_test();
+	//struct_test();
 	//File_Test();
 	//File_Test2();
 	//Err_Test();
-	Recursion_Test();
+	//Recursion_Test();
+	enum_test();
 
 	system("pause");
 	return 0;
